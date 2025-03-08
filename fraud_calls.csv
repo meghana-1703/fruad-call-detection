@@ -1,0 +1,4 @@
+caller_id,duration,frequency,location,call_type,label
+12345,120,5,New York,spam,1
+67890,300,1,Los Angeles,normal,0
+11121,50,10,Unknown,scam,1

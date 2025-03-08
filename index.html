@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Call Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Fraud Call Detection System</h2>
+        <form method="POST">
+            <label>Call Duration (seconds):</label>
+            <input type="number" name="duration" required>
+            
+            <label>Call Frequency:</label>
+            <input type="number" name="frequency" required>
+            
+            <label>Location (Enter 0 for NY, 1 for LA, etc.):</label>
+            <input type="number" name="location" required>
+            
+            <label>Call Type (Enter 0 for Normal, 1 for Spam, 2 for Scam):</label>
+            <input type="number" name="call_type" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
